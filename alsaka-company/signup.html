@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب - السقا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo"><a href="home.html">السقا</a></div>
+            <button class="hamburger" aria-label="القائمة" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <a href="home.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="categories.html">الفئات</a>
+                <a href="about.html">من نحن</a>
+            </nav>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn-theme" title="تبديل الوضع"><img id="themeIcon" src="icons/moon.svg" alt="Theme"></button>
+                <a href="cart.html" class="btn-cart" title="عربة التسوق"><img src="icons/cart.svg" alt="Cart"> <span id="cartCount">0</span></a>
+                <button class="btn-user" onclick="toggleUserMenu()" title="حسابي"><img src="icons/user.svg" alt="User"></button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 3rem 2rem; max-width: 500px; margin: 0 auto; min-height: 60vh;">
+        <h1><img src="icons/sparkles.svg" alt="" style="width: 28px; vertical-align: middle; margin-left: 8px;"> إنشاء حساب جديد</h1>
+        <form id="signupForm" style="display: flex; flex-direction: column; gap: 1rem;">
+            <input type="text" placeholder="الاسم الكامل" id="signupName" required>
+            <input type="email" placeholder="البريد الإلكتروني" id="signupEmail" required>
+            <input type="password" placeholder="كلمة المرور" id="signupPassword" required>
+            <input type="password" placeholder="تأكيد كلمة المرور" id="signupConfirm" required>
+            <button type="submit" class="btn btn-primary">إنشاء حساب</button>
+            <p style="text-align: center;">لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 شركة السقا. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', signupUser);
+    </script>
+</body>
+</html>

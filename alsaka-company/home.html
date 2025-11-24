@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السقا - أدوات منزلية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">السقا</div>
+            <button class="hamburger" aria-label="القائمة" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <a href="home.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="categories.html">الفئات</a>
+                <a href="about.html">من نحن</a>
+            </nav>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn-theme" title="تبديل الوضع"><img id="themeIcon" src="icons/moon.svg" alt="Theme"></button>
+                <a href="cart.html" class="btn-cart" title="عربة التسوق"><img src="icons/cart.svg" alt="Cart"> <span id="cartCount">0</span></a>
+                <button class="btn-user" onclick="toggleUserMenu()" title="حسابي"><img src="icons/user.svg" alt="User"></button>
+            </div>
+        </div>
+        <div id="userMenu" class="user-menu" style="display: none;">
+            <a href="login.html">تسجيل دخول</a>
+            <a href="signup.html">إنشاء حساب</a>
+            <a href="profile.html" id="profileLink" style="display: none;">الملف الشخصي</a>
+            <a href="#" onclick="logoutUser()" id="logoutLink" style="display: none;">تسجيل خروج</a>
+            <a href="admin-login.html">Admin</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1><img src="icons/sparkles.svg" alt="" style="width: 32px; vertical-align: middle; filter: brightness(0) saturate(100%) invert(61%) sepia(77%) saturate(494%) hue-rotate(357deg) brightness(99%) contrast(91%);"> أدوات منزلية عالية الجودة <img src="icons/sparkles.svg" alt="" style="width: 32px; vertical-align: middle; filter: brightness(0) saturate(100%) invert(61%) sepia(77%) saturate(494%) hue-rotate(357deg) brightness(99%) contrast(91%);"></h1>
+                <p>اكتشف أفضل المنتجات بأسعار منافسة وجودة لا مثيل لها <img src="icons/home.svg" alt="" style="width: 20px; vertical-align: middle; filter: brightness(0) invert(1); opacity: 0.7;"></p>
+                <a href="products.html" class="btn btn-primary"><img src="icons/search.svg" alt="" style="width: 20px; vertical-align: middle; margin-left: 8px;"> تصفح المنتجات الآن</a>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <h2>الفئات</h2>
+            <div id="homeCategoriesGrid" class="grid-4">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="cooking_0.jpg" alt="أدوات المطبخ">
+                    </div>
+                    <h3 class="product-name">🍳 أدوات المطبخ</h3>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="imgo.webp" alt="أواني وتخزين">
+                    </div>
+                    <h3 class="product-name">📦 أواني وتخزين</h3>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="download.jpg" alt="أدوات التنظيف">
+                    </div>
+                    <h3 class="product-name">🧹 أدوات التنظيف</h3>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="plastic.jpg" alt="بلاستيك ومنوعات">
+                    </div>
+                    <h3 class="product-name">🏡 بلاستيك ومنوعات</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>منتجاتنا المميزة</h2>
+            <div id="homeProductsGrid" class="grid-3"></div>
+        </section>
+
+        <section class="about-section">
+            <h2><img src="icons/building.svg" alt="" style="width: 28px; vertical-align: middle; margin-left: 8px;"> من نحن</h2>
+            <p>شركة السقا متخصصة في توفير أدوات منزلية عالية الجودة منذ 2010 <img src="icons/star.svg" alt="" style="width: 18px; vertical-align: middle; filter: brightness(0) saturate(100%) invert(61%) sepia(77%) saturate(494%) hue-rotate(357deg) brightness(99%) contrast(91%);"></p>
+            <a href="about.html" class="btn btn-outline"><img src="icons/book.svg" alt="" style="width: 20px; vertical-align: middle; margin-left: 8px;"> اعرف أكثر</a>
+        </section>
+
+        <section class="contact-section">
+            <h2><img src="icons/phone.svg" alt="" style="width: 28px; vertical-align: middle; margin-left: 8px;"> تواصل معنا</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="اسمك" required>
+                <input type="email" placeholder="بريدك الإلكتروني" required>
+                <textarea placeholder="رسالتك" required></textarea>
+                <button type="submit" class="btn btn-primary">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 شركة السقا. جميع الحقوق محفوظة</p>
+            <a href="#" onclick="navigateTo('privacy')">سياسة الخصوصية</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

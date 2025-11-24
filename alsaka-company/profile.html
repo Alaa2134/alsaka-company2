@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - السقا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo"><a href="home.html">السقا</a></div>
+            <button class="hamburger" aria-label="القائمة" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <a href="home.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="categories.html">الفئات</a>
+                <a href="about.html">من نحن</a>
+            </nav>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn-theme" title="تبديل الوضع"><img id="themeIcon" src="icons/moon.svg" alt="Theme"></button>
+                <a href="cart.html" class="btn-cart" title="عربة التسوق"><img src="icons/cart.svg" alt="Cart"> <span id="cartCount">0</span></a>
+                <button class="btn-user" onclick="toggleUserMenu()" title="حسابي"><img src="icons/user.svg" alt="User"></button>
+            </div>
+        </div>
+        <div id="userMenu" class="user-menu" style="display: none;">
+            <a href="login.html">تسجيل دخول</a>
+            <a href="signup.html">إنشاء حساب</a>
+            <a href="profile.html" id="profileLink" style="display: none;">الملف الشخصي</a>
+            <a href="#" onclick="logoutUser()" id="logoutLink" style="display: none;">تسجيل خروج</a>
+            <a href="admin-login.html">Admin</a>
+        </div>
+    </header>
+
+    <main style="padding: 3rem 2rem; max-width: 600px; margin: 0 auto; min-height: 60vh;">
+        <h1><img src="icons/user.svg" alt="" style="width: 32px; vertical-align: middle; margin-left: 8px;"> الملف الشخصي</h1>
+        <div id="profileContainer"></div>
+        <button class="btn btn-outline" onclick="logoutUser()" style="margin-top: 2rem;">تسجيل الخروج</button>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 شركة السقا. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        displayProfile();
+    </script>
+</body>
+</html>
